@@ -1,0 +1,4 @@
+CREATE DATABASE shirts_db;
+
+CREATE TABLE shirts
+VALUES (
