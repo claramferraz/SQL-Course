@@ -1,5 +1,5 @@
--- CREATE DATABASE BookShop;
--- USE BookShop;
+CREATE DATABASE BookShop;
+USE BookShop;
 
 CREATE TABLE books 
 	(
@@ -31,3 +31,12 @@ VALUES
 ('Cannery Row', 'John', 'Steinbeck', 1945, 95, 181),
 ('Oblivion: Stories', 'David', 'Foster Wallace', 2004, 172, 329),
 ('Consider the Lobster', 'David', 'Foster Wallace', 2005, 92, 343);
+
+SELECT CONCAT(author_fname, ' ', author_lname) AS author, pages
+FROM books
+WHERE pages=(SELECT MAX(pages) FROM books);
+
+SELECT released_year as year, COUNT(title) AS books, AVG(pages) AS avg_pages
+FROM books
+GROUP BY year
+ORDER BY year;
