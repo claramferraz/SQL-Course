@@ -1,0 +1,3 @@
+Exercícios do MySQL Bootcamp
+
+Práticas: CRUD, JOINS, DATETIME, FOREIGN KEY, PRIMARY KEY, RELAÇÕES ENTRE TABLES
